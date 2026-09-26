@@ -1,0 +1,15 @@
+{
+  "name": "sync-clipboard",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:create": "wrangler d1 create sync-clipboard-db",
+    "db:init": "wrangler d1 execute sync-clipboard-db --file=./schema.sql",
+    "db:init:remote": "wrangler d1 execute sync-clipboard-db --remote --file=./schema.sql"
+  },
+  "devDependencies": {
+    "wrangler": "^3.80.0"
+  }
+}
