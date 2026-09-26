@@ -22,4 +22,4 @@ tag = "v1"
 new_classes = ["SyncRoom"]
 
 [vars]
-JWT_SECRET = "__REPLACE_OR_USE_SECRET__"
+JWT_SECRET = "30e3d5a4-4ad4-43ae-b854-fb7dc59af558"
