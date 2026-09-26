@@ -1,0 +1,25 @@
+name = "sync-clipboard"
+main = "src/worker.js"
+compatibility_date = "2024-09-25"
+compatibility_flags = ["nodejs_compat"]
+
+routes = [
+  { pattern = "sync.windlife.site/*", zone_name = "windlife.site" }
+]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "sync-clipboard-db"
+database_id = "__REPLACE_WITH_YOUR_D1_ID__"
+
+[durable_objects]
+bindings = [
+  { name = "SYNC_ROOM", class_name = "SyncRoom" }
+]
+
+[[migrations]]
+tag = "v1"
+new_classes = ["SyncRoom"]
+
+[vars]
+JWT_SECRET = "__REPLACE_OR_USE_SECRET__"
